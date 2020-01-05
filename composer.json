@@ -21,6 +21,15 @@
         "issues": "https://github.com/ValentinBV/yii2-rss/issues",
         "source": "https://github.com/ValentinBV/yii2-rss"
     },
+	 "repositories": [
+		{
+		  "type": "vcs",
+		  "url": "https://github.com/ValentinBV/RSS-Generator"
+		}
+    ],
+    "require": {
+        "zelenin/rss-generator": "dev-master"
+    },
     "autoload": {
         "psr-4": {
             "Zelenin\\yii\\extensions\\Rss\\": ""
