@@ -7,7 +7,7 @@
         "rss",
         "feed"
     ],
-    "homepage": "https://github.com/zelenin/yii2-rss",
+    "homepage": "https://github.com/ValentinBV",
     "license": "MIT",
     "authors": [
         {
@@ -18,12 +18,18 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/zelenin/yii2-rss/issues",
-        "source": "https://github.com/zelenin/yii2-rss"
+        "issues": "https://github.com/ValentinBV/yii2-rss/issues",
+        "source": "https://github.com/ValentinBV/yii2-rss"
     },
+	 "repositories": [
+		{
+		  "type": "vcs",
+		  "url": "https://github.com/ValentinBV/RSS-Generator.git"
+		}
+    ],
     "require": {
         "yiisoft/yii2": "~2",
-        "zelenin/rss-generator": "~2.1@stable"
+        "zelenin/rss-generator": "dev-master"
     },
     "autoload": {
         "psr-4": {
