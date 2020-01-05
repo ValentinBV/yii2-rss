@@ -34,6 +34,11 @@ class RssView extends BaseListView
      * @var array
      */
     public $requiredItemElements = ['title', 'description', 'link', 'pubDate'];
+    
+    /**
+     * @var array
+     */
+    public $rss;
 
     /**
      * @var array
@@ -44,6 +49,10 @@ class RssView extends BaseListView
      * @var array
      */
     private $itemAttributes = [];
+    /**
+     * @var array
+     */
+    private $rssAttributes = [];
 
     /**
      * @inheritdoc
@@ -67,7 +76,8 @@ class RssView extends BaseListView
                 throw new InvalidConfigException('Required item attribute "' . $itemElement . '" must be set');
             }
         }
-        $this->feed = new Feed;
+        $this->rssAttributes = $this->getRssAttributes($this->rss);
+        $this->feed = new Feed($this->rssAttributes);
     }
 
     /**
@@ -161,6 +171,21 @@ class RssView extends BaseListView
                 }
             }
         }
+        return $attributes;
+    }
+    
+    /**
+     * @param $configArray
+     *
+     * @return array
+     */
+    public function getRssAttributes($configArray)
+    {
+        $attributes = [];
+        foreach ($configArray as $key => $value) {
+            $attributes[$key] = $value;
+        }
+        
         return $attributes;
     }
 }
