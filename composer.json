@@ -16,12 +16,12 @@
             "homepage": "http://zelenin.me",
             "role": "Developer"
         },
-		{
+        {
             "name": "Valentin Bondarenko",
             "email": "bvv1988@gmail.com",
             "homepage" : "https://github.com/ValentinBV",
             "role" : "Developer"
-		}
+        }
     ],
     "support": {
         "issues": "https://github.com/ValentinBV/yii2-rss/issues",
